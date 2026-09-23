@@ -32,7 +32,7 @@ Maintenance scaffolding:
 - `QUICK-START.md` — config repo docs
 - `README.md` — config repo readme (user should write their own)
 - `.claude/CHANGELOG.md` — the kit's changelog (not the user's project changelog)
-- `.github/workflows/ci.yml` — config repo CI (keep `claude-code.yml` if present)
+- `.github/workflows/ci.yml` — config repo CI (keep `.github/templates/claude-code.yml` if present)
 - `.env.example` — should already be copied to .env
 
 Distribution infra (Claude Code plugin marketplace + Vercel install endpoint — only relevant when *publishing* the kit):

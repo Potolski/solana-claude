@@ -239,8 +239,9 @@ See [`skill-registry.json`](.claude/skills/skill-registry.json) for the complete
 ├── tests/                       # Config integrity test suite
 ├── .github/workflows/
 │   ├── ci.yml                       # PR validation
-│   ├── claude-code.yml              # Claude Code action template
 │   └── claude.yml                   # @claude mention responder (issues/PRs)
+├── .github/templates/
+│   └── claude-code.yml              # Claude Code action template (copy into a project's own workflows/)
 └── .claude/
     ├── VERSION                  # Semver version (e.g. 2.0.0)
     ├── agents/                  # 15 specialized agents
@@ -359,10 +360,10 @@ See [`skill-registry.json`](.claude/skills/skill-registry.json) for the complete
 
 ## GitHub Action for Team Collaboration
 
-This config includes a pre-built GitHub Action (`.github/workflows/claude-code.yml`) for PR-based iteration:
+This config includes a pre-built GitHub Action (`.github/templates/claude-code.yml`) for PR-based iteration:
 
 1. Add `ANTHROPIC_API_KEY` to your repository secrets
-2. Copy `.github/workflows/claude-code.yml` to your project
+2. Copy `.github/templates/claude-code.yml` to `.github/workflows/claude-code.yml` in your project
 3. Team members can `@claude` in PR comments
 4. Claude responds with code suggestions using this configuration
 
