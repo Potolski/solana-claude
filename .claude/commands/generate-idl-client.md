@@ -274,8 +274,8 @@ npm update @codama/renderers-js @codama/nodes-from-anchor
 
 ### Missing Anchor Types
 ```bash
-# Ensure @coral-xyz/anchor is installed
-npm install @coral-xyz/anchor
+# Ensure @anchor-lang/core is installed
+npm install @anchor-lang/core
 # Rebuild to regenerate types
 anchor build
 ```

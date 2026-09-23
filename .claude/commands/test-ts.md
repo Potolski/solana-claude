@@ -64,8 +64,8 @@ RUST_LOG=debug anchor test
 ### Anchor Test Pattern
 
 ```typescript
-import * as anchor from "@coral-xyz/anchor";
-import { Program } from "@coral-xyz/anchor";
+import * as anchor from "@anchor-lang/core";
+import { Program } from "@anchor-lang/core";
 import { MyProgram } from "../target/types/my_program";
 import { expect } from "chai";
 

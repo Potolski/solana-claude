@@ -408,7 +408,7 @@ For programs managing significant value, consider formal verification with [QEDG
 ## Best Practices
 
 ### Account Design
-1. **Use InitSpace derive** - Anchor 0.32+ calculates sizes automatically
+1. **Use InitSpace derive** - Anchor 1.0 calculates sizes automatically via `T::DISCRIMINATOR.len() + T::INIT_SPACE`
 2. **Add version field** - Enable future upgrades
 3. **Reserve space** - Add padding for future fields
 4. **Optimize layout** - Most accessed data first

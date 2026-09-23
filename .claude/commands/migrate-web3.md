@@ -84,7 +84,7 @@ Reference these when transforming each file:
 | `@solana/web3.js` | `@solana/kit` (umbrella) |
 | `@solana/spl-token` | `@solana/spl-token` (updated) or Codama-generated |
 | `@solana/wallet-adapter-*` | `@solana/wallet-standard` + `@wallet-standard/react` |
-| `@coral-xyz/anchor` | `@coral-xyz/anchor` (compatible with both) |
+| `@coral-xyz/anchor` (legacy pre-1.0 name) | `@anchor-lang/core` (Anchor 1.0 rename; compatible with both web3.js versions) |
 
 ### Common Patterns
 
@@ -190,7 +190,7 @@ npm test
 - **Incremental**: Migrate one file at a time, verify after each
 - **Boundary pattern**: If some code must stay on web3.js temporarily, use the interop boundary from kit-web3-interop.md
 - **Tests first**: Migrate test utilities first, then shared code, then page-level code
-- **Anchor compatibility**: `@coral-xyz/anchor` works with both; migrate around it
+- **Anchor compatibility**: `@anchor-lang/core` (renamed from `@coral-xyz/anchor` in Anchor 1.0) works with both; migrate around it
 
 ## After Migration
 
