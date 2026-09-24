@@ -164,6 +164,7 @@ Recommended team patterns:
 | **full-stack** | architect → anchor → frontend → qa | End-to-end feature |
 | **audit-and-fix** | qa → trailofbits context → anchor | Audit and remediate |
 | **game-ship** | game-architect → unity → qa | Game feature |
+| **research-and-build** | researcher → architect → anchor/pinocchio | Investigate a protocol or pattern, then design and implement |
 | **defi-compose** | researcher → defi-engineer → qa | DeFi integration |
 | **token-launch** | token-engineer → frontend → qa | Token creation + launch UI |
 
