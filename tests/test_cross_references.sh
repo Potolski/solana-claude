@@ -63,6 +63,11 @@ for cmd_file in "$REPO_ROOT/.claude/commands/"*.md; do
   assert_file_contains "$REPO_ROOT/QUICK-START.md" "/$CMD_BASENAME" "QUICK-START.md contains command: /$CMD_BASENAME"
 done
 
+# --- README version badge matches .claude/VERSION ---
+echo "[versioning]"
+KIT_VERSION=$(grep -oE '[0-9]+\.[0-9]+\.[0-9]+' "$REPO_ROOT/.claude/VERSION" | head -1)
+assert_file_contains "$REPO_ROOT/README.md" "version-$KIT_VERSION-blue" "README.md version badge matches .claude/VERSION ($KIT_VERSION)"
+
 # --- Submodule count matches ext/ directories ---
 echo "[submodules]"
 if [ -f "$REPO_ROOT/.gitmodules" ]; then

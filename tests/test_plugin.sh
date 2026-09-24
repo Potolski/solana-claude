@@ -61,5 +61,7 @@ echo "[version coherence]"
 KIT_VERSION="$(grep -oE '[0-9]+\.[0-9]+\.[0-9]+' "$REPO_ROOT/.claude/VERSION" | head -1)"
 PLUGIN_VERSION="$(python3 -c "import json; print(json.load(open('$PLUGIN_MANIFEST'))['version'])" 2>/dev/null)"
 assert_eq "$KIT_VERSION" "$PLUGIN_VERSION" "plugin.json version ($PLUGIN_VERSION) matches .claude/VERSION ($KIT_VERSION)"
+MARKETPLACE_VERSION="$(python3 -c "import json; print(json.load(open('$MARKETPLACE'))['metadata']['version'])" 2>/dev/null)"
+assert_eq "$KIT_VERSION" "$MARKETPLACE_VERSION" "marketplace.json metadata.version ($MARKETPLACE_VERSION) matches .claude/VERSION ($KIT_VERSION)"
 
 print_summary

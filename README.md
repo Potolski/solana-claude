@@ -3,7 +3,7 @@
 # Solana AI Kit
 
 [![CI](https://github.com/solanabr/solana-ai-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/solanabr/solana-ai-kit/actions/workflows/ci.yml)
-![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Version](https://img.shields.io/badge/version-2.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Solana](https://img.shields.io/badge/Solana-black?logo=solana)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-powered-orange)
@@ -242,7 +242,7 @@ See [`skill-registry.json`](.claude/skills/skill-registry.json) for the complete
 │   ├── claude-code.yml              # Claude Code action template
 │   └── claude.yml                   # @claude mention responder (issues/PRs)
 └── .claude/
-    ├── VERSION                  # Semver version (e.g. 2.0.0)
+    ├── VERSION                  # Semver version (e.g. 2.1.0)
     ├── agents/                  # 15 specialized agents
     ├── bin/
     │   ├── update.sh                # In-place update from upstream
