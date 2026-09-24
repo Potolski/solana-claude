@@ -14,6 +14,11 @@ CONFIG_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 CONFIG_NAME="$(basename "$CONFIG_DIR")"
 TARGET_DIR="$(cd "$CONFIG_DIR/.." && pwd)"
 
+# Run from the target project root regardless of the caller's cwd, so the
+# relative paths and git commands below always resolve against the project,
+# not wherever this script happened to be invoked from.
+cd "$TARGET_DIR"
+
 if [ ! -d "$TARGET_DIR/$CONFIG_NAME/skills/ext" ]; then
   echo "Error: $CONFIG_NAME/skills/ext/ not found. Run from your project root."
   exit 1
