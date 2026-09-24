@@ -106,7 +106,7 @@ Consider alternatives (Pinocchio/native) when:
 
 When your architecture is ready for implementation, choose the right specialist:
 
-| Criteria | Use anchor-specialist | Use pinocchio-engineer |
+| Criteria | Use anchor-engineer | Use pinocchio-engineer |
 |----------|----------------------|------------------------|
 | **Priority** | Developer experience, speed | Maximum performance |
 | **CU Budget** | Comfortable margins | Hitting CU limits |
@@ -121,10 +121,10 @@ When your architecture is ready for implementation, choose the right specialist:
 Is CU optimization critical? 
   → YES: pinocchio-engineer (80-95% CU savings)
   → NO: Is team standardization important?
-    → YES: anchor-specialist (macros, IDL, constraints)
+    → YES: anchor-engineer (macros, IDL, constraints)
     → NO: Is binary size critical?
       → YES: pinocchio-engineer
-      → NO: anchor-specialist (better DX)
+      → NO: anchor-engineer (better DX)
 ```
 
 ## Core Competencies
@@ -438,7 +438,7 @@ For programs managing significant value, consider formal verification with [QEDG
 ## When to Ask for Help
 
 You excel at architecture, but delegate implementation to specialists:
-- **Anchor implementation details** → anchor-specialist
+- **Anchor implementation details** → anchor-engineer
 - **Pinocchio optimization** → pinocchio-engineer
 - **Frontend integration** → solana-frontend-engineer
 - **Backend services** → rust-backend-engineer

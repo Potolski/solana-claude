@@ -117,7 +117,7 @@ Plugins are plain git clones, so they can't carry the 18 `ext/` submodules, the 
 
 Create multi-agent workflows:
 ```
-"Create an agent team: architect for design, anchor-engineer for code, qa-engineer for tests"
+"Create an agent team: solana-architect for design, anchor-engineer for code, solana-qa-engineer for tests"
 ```
 
 ### Auto-Loading Rules
