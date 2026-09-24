@@ -187,7 +187,7 @@ echo "Setting up test infrastructure..."
 if [ -f "Anchor.toml" ]; then
     # Ensure test dependencies
     if [ -f "package.json" ]; then
-        npm install --save-dev @coral-xyz/anchor mocha chai @types/mocha @types/chai ts-mocha
+        npm install --save-dev @anchor-lang/core mocha chai @types/mocha @types/chai ts-mocha
     fi
 
     # Create test template if tests dir is empty

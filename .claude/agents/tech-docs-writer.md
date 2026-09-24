@@ -229,7 +229,7 @@ anchor test
 ## Setup
 
 \`\`\`typescript
-import { Program } from '@coral-xyz/anchor';
+import { Program } from '@anchor-lang/core';
 import { YourProgram } from '@your-org/sdk';
 \`\`\`
 

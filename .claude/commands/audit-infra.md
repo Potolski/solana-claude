@@ -51,7 +51,7 @@ Severity: live secret in tree or history = CRITICAL (rotation required — remov
 ## Phase 2: Dependency Supply Chain
 
 1. **Known vulns**: `npm audit` / `pnpm audit` (Node), `cargo audit` (Rust), `pip-audit` (Python).
-2. **Typosquats**: verify exact names of every direct dependency — letter swaps (`lodash`/`1odash`), scope confusion (`@solana/web3.js` vs `solana-web3.js`), lookalike Solana packages (`@coral-xyz/anchor` is canonical).
+2. **Typosquats**: verify exact names of every direct dependency — letter swaps (`lodash`/`1odash`), scope confusion (`@solana/web3.js` vs `solana-web3.js`), lookalike Solana packages (`@anchor-lang/core` is canonical since Anchor 1.0; `@coral-xyz/anchor` is the legacy pre-1.0 name — flag anything else).
 3. **Install-time code execution**: search `node_modules/*/package.json` and the lockfile for `preinstall`/`postinstall`/`prepare` scripts in newly added packages; flag any that fetch remote code.
 4. **Maintainer risk**: single-maintainer packages with huge reach, recent ownership transfers, packages unpublished/republished, last release > 2 years ago.
 5. **Pinning**: lockfile present, committed, and fresh; `^`/`~` ranges on security-sensitive prod deps; Rust: `[workspace.dependencies]` pinned; CI uses `npm ci` (not `npm install`).
